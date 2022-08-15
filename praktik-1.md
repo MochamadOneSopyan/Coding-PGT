@@ -5,9 +5,9 @@ Ini hanyalah salah satu dari banyak cara untuk berkolaborasi dalam sebuah proyek
 ##Langkah 1: Inisialisasi Proyek Baru
 Buat proyek/direktori baru dari baris perintah
 
-```bash
+````bash
 $ rel baru github_guide
-''''
+````
 Buka Github dan klik tombol '+' di pojok kanan rop dan pilih 'New Repository'.
 ![new_repo](https://user-images.githubusercontent.com/111016644/184645133-c288ac62-4f53-4d41-99d0-73b4f910f884.png)
 
@@ -30,11 +30,11 @@ Dan jika Anda pergi ke halaman Repo Github Anda, Anda akan melihat ReadMe yang A
  ![3](https://user-images.githubusercontent.com/111016644/184646891-239c6c4b-26d9-4a32-9743-ad96dc502c86.png)
 
 Sekarang mari kita perbarui Repo ini. Kembali ke terminal Anda dan git add, git commit, dan git Push:
-''''bash
+````bash
 $git add .
 $ git commit -m "Second commit"
 $ git push
-''''
+````
 
 Sekarang periksa repo Anda. Seharusnya memiliki semua file yang Anda buat dengan direktori lokal Anda bersama dengan id komit baru (b4babd7):
  ![4](https://user-images.githubusercontent.com/111016644/184647107-7a466e82-317d-42c6-8b73-3999982628d2.png)
@@ -56,11 +56,11 @@ Jika Anda seorang kolaborator, buka halaman Github Repo, Git Clone proyek, dan c
 
  ![8](https://user-images.githubusercontent.com/111016644/184647415-b409d122-713d-4c96-958d-a6327d1c3235.png)
 
-''''bash
+````bash
 $ git clone https://github.com/MochamadOneSopyan/github_guide.git
 $cd github_guide/
 Dan sekarang Anda siap untuk berkolaborasi!
-''''
+````
 
 ##Langkah 3: Berkolaborasi
 Saat Anda menggunakan git untuk mengerjakan proyek yang sama dengan banyak orang, ada satu aturan utama yang harus Anda ikuti:
@@ -76,16 +76,16 @@ Untuk memulai, cabang harus selalu mewakili fitur. Misalnya, jika Anda ingin men
 Penting juga saat berkolaborasi agar tim Anda memilih fitur yang tidak memiliki kode yang tumpang tindih. Misalnya, Anda tidak boleh mengerjakan cabang "user_login" pada saat yang sama dengan rekan satu tim Anda bekerja di cabang "user_logout" karena kemungkinan Anda mengerjakan file yang sama dan menulis kode yang tumpang tindih sangat tinggi .
 
 Jadi katakanlah Anda ingin membuat model Pengguna. Di terminal Anda, buat cabang baru:
-''''bash
+````bash
 $ git checkout -b create_user
-''''
+````
 
 “co” adalah singkatan dari “checkout” yang digunakan untuk berpindah antar cabang. Menambahkan "-b" dan nama di akhir membuat cabang baru dan kemudian pindah ke cabang baru itu untuk kita.
 
 Anda harus dapat memverifikasi ini dengan perintah:
-''''bash
+````bash
 $git branch
-''''
+````
 
 Yang harus menghasilkan:
  ![9](https://user-images.githubusercontent.com/111016644/184647720-fabc81b2-18ac-42d1-8066-dc8a3e83071e.png)
@@ -94,9 +94,10 @@ Yang harus menghasilkan:
 Anda sekarang berada di cabang baru dan dapat mulai membuat kode.
 
 Catatan: Sebagai aturan umum, Anda harus sering git add dan git commit ketika Anda menyelesaikan sesuatu yang memungkinkan kode Anda berfungsi (berakhir menjadi beberapa kali dalam satu jam). Misalnya, ketika Anda menyelesaikan suatu metode dan basis kode berfungsi, git commit seperti ini:
-
+````bash
 $ git commit -m " Tambahkan penyesuaian pada footer login page"
 Langkah 3b: Mengirimkan Permintaan Tarik
+````
 
 Tim Anda menghabiskan sepanjang hari dan malam mengerjakan fitur terpisah mereka di berbagai cabang mereka. Mereka kembali keesokan harinya dengan fitur lengkap mereka dan ingin menggabungkan mereka kembali ke Master untuk digunakan.
 
@@ -105,8 +106,9 @@ Menentukan Git Flow Anda adalah bagian besar dari bekerja dalam tim, tetapi inil
 Pertama, tentukan siapa yang akan bertanggung jawab menangani penggabungan. Semakin sedikit orang yang bertindak secara independen dalam penggabungan semakin baik sehingga untuk tim yang terdiri dari 4 orang, Anda mungkin perlu memiliki satu "Reviewer" atau "Merge Master" resmi.
 
 Selanjutnya, minta semua orang git Push cabang mereka:
-
+````bash
 $ git push
+````
 Sekarang pergi ke halaman Repo Github. Anda akan melihat cabang yang Anda dorong di bilah kuning di bagian atas halaman dengan tombol "Bandingkan & tarik permintaan".
 
 Catatan: Atau, Anda dapat memilih cabang di menu tarik-turun “Cabang:” dan pilih cabang yang baru saja Anda tekan. Anda kemudian akan memiliki tombol "Tarik permintaan" dan "Bandingkan" di sisi kanan.
